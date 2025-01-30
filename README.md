@@ -54,3 +54,5 @@ i'll create a `Cargo.toml` and a folder named `src` which contains a `main.rs` f
 `Cargo.toml` file represents the dependencies of the current project.
 
 </details>
+
+**Now, you have a rust project created on your machine!**🎉
