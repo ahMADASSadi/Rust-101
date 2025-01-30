@@ -13,8 +13,6 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 
 this will download and install Rust on your machine.
 
-<hl>
-
 after installation you will see a 'installation successfull' message! this means you are all setup to go.
 
 ## Create a new project
