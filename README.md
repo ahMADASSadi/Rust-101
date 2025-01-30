@@ -51,6 +51,8 @@ i'll create a `Cargo.toml` and a folder named `src` which contains a `main.rs` f
 
 ### Run the project
 
+## TODO: Update the doc because the cargo run both compiles and runs the project but you can first compile it using rustc main.rs and the run it using ./main for example
+
 To run the rust you just need a simple command:
 
 ```bash
