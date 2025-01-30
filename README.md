@@ -55,4 +55,17 @@ i'll create a `Cargo.toml` and a folder named `src` which contains a `main.rs` f
 
 </details>
 
-**Now, you have a rust project created on your machine!**🎉
+**Now, you have a rust project created on your machine!** 🎉
+
+## Run the project
+
+To run the rust you just need a simple command:
+
+```bash
+
+cargo run
+```
+
+automatically, it will run the `main.rs` file in the src folder but you can specify a name so it will compile and run that instead.(e.g.`cargo run [name]`)
+
+after running the file, a new `Cargo.lock` file gets created that shows all the necessary dependencies for running this project, also a `target` folder will be created which i'm not totally aware of its purpose but, as soon as i figured that out it will be shown here.
