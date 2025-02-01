@@ -1,6 +1,6 @@
-use rand::Rng;
-use std::cmp::Ordering;
-use std::io;
+// use rand::Rng;
+// use std::cmp::Ordering;
+// use std::io;
 
 fn main() {
     // let random_number = rand::rng().random_range(1..=10);
@@ -105,17 +105,111 @@ fn main() {
 
     //     println!("Fibonacci series is :{:?}", fibonacci_series);
     // }
-    let s1 = String::from("hello");
-    let s2 = s1.clone();
+    // let s1 = String::from("hello");
+    // let s2 = s1.clone();
 
-    println!("{s2}");
-    println!("{s1}");
+    // println!("{s2}");
+    // println!("{s1}");
 
-    let mut s = String::from("hello");
-    println!("{s}, world!");
+    // let mut s = String::from("hello");
+    // println!("{s}, world!");
+
+    // s = String::from("ahoy");
+
+    // println!("{s}, world!");
+
+    // fn option(s:&String) -> (&String,usize){
+    //     let len:usize = s.len();
+    //     (s,len)
+    // }
+    // let s1 = String::from("some text here");
+
+    // let (s2,len) = option(&s1);
+    // println!("{s1}");
+
+    // println!("{s2},{len}");
+
+    // fn dangle() ->String{
+    //     let s = String::from("hello");
+    //     s
+    // }
+
+    // let some_thing = dangle();
+
+    // let pointer = &some_thing;
+
+    // println!("{some_thing}");
+    // println!("{pointer}");
+
+    // let s = String::from("hello world");
+
+    // let mut hello = &s[0..5];
+    // let mut world = &s[6..11];
+
+    // let hello = String::from(&s[0..5]);
+    // let world = String::from(&s[6..11]);
+
+    // let hello = (s[0..5]).to_string();
+    // let world = (s[6..11]).to_string();
+
+    // print!("{hello}");
+    // print!("{world}");
+    // println!();
+    // fn first_word(s: &str) -> &str {
+    //     let bytes = s.as_bytes();
+
+    //     for (i, &item) in bytes.iter().enumerate() {
+    //         if item == b' ' {
+    //             return &s[0..i];
+    //         }
+    //     }
+    //     &s[..]
+    // }
+    // let mut s = String::from("hello world");
+
+    // let word = first_word(&s);
+
+    // println!("the first word is: {word}");
+
+    // let my_string = String::from("hello world");
+
+    // // `first_word` works on slices of `String`s, whether partial or whole
+    // let word = first_word(&my_string[0..6]);
+    // println!("the first word is: {word}");
+    // let word = first_word(&my_string[..]);
+    // println!("the first word is: {word}");
+    // // `first_word` also works on references to `String`s, which are equivalent
+    // // to whole slices of `String`s
+    // let word = first_word(&my_string);
+    // println!("the first word is: {word}");
+    // let my_string_literal = "hello meow";
+    // // `first_word` works on slices of string literals, whether partial or whole
+    // let word = first_word(&my_string_literal[6..]);
+    // println!("the first word is: {word}");
+    // let word = first_word(&my_string_literal[..]);
+    // println!("the first word is: {word}");
     
-    s = String::from("ahoy");
+    // // Because string literals *are* string slices already,
+    // // this works too, without the slice syntax!
+    // let word = first_word(my_string_literal);
+    // println!("the first word is: {word}");
 
-    println!("{s}, world!");
+    let a = [1, 2, 3, 4, 5];
 
+    let slice = &a[1..3];
+    print!("[");
+    for i in 0..a.len(){
+        print!("{},", a[i]);
+    }
+    println!("]");
+
+    print!("[");
+    for i in 0..slice.len(){
+        print!("{},", slice[i]);
+    }
+    println!("]");
+
+    if slice == &[2, 3] {
+        println!("slice is equal to [2, 3]");
+    };
 }
