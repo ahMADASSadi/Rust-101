@@ -269,16 +269,61 @@ fn main() {
     // // this line will not work with the above code
     // println!("{}",circle.radius);
 
+    // #[derive(Debug)]
+    // struct Circle {
+    //     radius: f64,
+    // }
+
+    // let circle = Circle { radius: 5.0 };
+
+    // println!("{circle:#?}");
+    // dbg!(&circle);
+    // println!("{circle:#?}")
+    // #[derive(Debug)]
+    // struct Circle { radius: f64}
+
+    // impl Circle{
+    //     fn area(&self) -> f64{
+    //         3.14159 * self.radius
+    //     }
+    // }
+
+    // let circle = Circle { radius: 5.0 };
+
+    // dbg!(circle.area());
+    // println!("{}",circle.area());
+
     #[derive(Debug)]
-    struct Circle {
-        radius: f64,
+    struct Rectangle {
+        width: f64,
+        height: f64,
     }
 
-    let circle = Circle { radius: 5.0 };
+    impl Rectangle {
+        fn square(size: f64) -> Self {
+            Self {
+                width: size,
+                height: size,
+            }
+        }
+        fn area(&self) -> f64 {
+            self.width * self.height
+        }
+        fn can_hold(&self,other: &Rectangle) -> bool {
+            self.width >= other.width && self.height >= other.height
+        }
+    }
 
-    println!("{circle:#?}");
-    dbg!(circle);
 
+    let square:Rectangle = Rectangle::square(10.0);
+
+    let rect1:Rectangle = Rectangle{width:20.0, height:10.0};
+
+    dbg!(&square);
+    // println!("{square:#?}");
+    println!("{}",square.area());
+
+    println!("{}",rect1.area());
+
+    println!("{}",square.can_hold(&rect1));
 }
-
-use std::fmt::Display;
