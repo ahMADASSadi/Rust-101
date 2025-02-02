@@ -188,28 +188,97 @@ fn main() {
     // println!("the first word is: {word}");
     // let word = first_word(&my_string_literal[..]);
     // println!("the first word is: {word}");
-    
+
     // // Because string literals *are* string slices already,
     // // this works too, without the slice syntax!
     // let word = first_word(my_string_literal);
     // println!("the first word is: {word}");
 
-    let a = [1, 2, 3, 4, 5];
+    // let a = [1, 2, 3, 4, 5];
 
-    let slice = &a[1..3];
-    print!("[");
-    for i in 0..a.len(){
-        print!("{},", a[i]);
+    // let slice = &a[1..3];
+    // print!("[");
+    // for i in 0..a.len(){
+    //     print!("{},", a[i]);
+    // }
+    // println!("]");
+
+    // print!("[");
+    // for i in 0..slice.len(){
+    //     print!("{},", slice[i]);
+    // }
+    // println!("]");
+
+    // if slice == &[2, 3] {
+    //     println!("slice is equal to [2, 3]");
+    // };
+
+    // struct User {
+    //     username: String,
+    //     email: String,
+    //     sign_in_count: u64,
+    //     active: bool,
+    // }
+
+    // let mut user=User{
+    //     username:String::from("madassandd"),
+    //     email:String::from("madassand@gmail.com"),
+    //     sign_in_count:1,
+    //     active:true,
+    // };
+
+    // let user2 = User {
+    //     email: String::from("another@example.com"),
+    //     ..user
+    // };
+
+    // println!("{}",user2.sign_in_count);
+
+    // user.email= String::from("madassandd@gmail.com");
+    // println!("{}",user.email);
+
+    // struct Game(String,i32);
+
+    // let game = Game(String::from("Game of thrones"), 8);
+
+    // println!("{}",game.0);
+
+    // fn calculate_area(circle: &Circle) -> f64 {
+    //     3.14159 * circle.radius * circle.radius
+    // }
+    // struct Circle{
+    //     radius:f64,
+    // }
+
+    // let circle = Circle{radius:5.0};
+    // println!("Area of circle is :{:?}",calculate_area(&circle));
+
+    // // this line will work with the above code
+    // println!("{}",circle.radius);
+
+    // fn calculate_area(circle: Circle) -> f64 {
+    //     3.14159 * circle.radius * circle.radius
+    // }
+    // struct Circle{
+    //     radius:f64,
+    // }
+
+    // let circle = Circle{radius:5.0};
+    // println!("Area of circle is :{:?}",calculate_area(circle));
+
+    // // this line will not work with the above code
+    // println!("{}",circle.radius);
+
+    #[derive(Debug)]
+    struct Circle {
+        radius: f64,
     }
-    println!("]");
 
-    print!("[");
-    for i in 0..slice.len(){
-        print!("{},", slice[i]);
-    }
-    println!("]");
+    let circle = Circle { radius: 5.0 };
 
-    if slice == &[2, 3] {
-        println!("slice is equal to [2, 3]");
-    };
+    println!("{circle:#?}");
+    dbg!(circle);
+
 }
+
+use std::fmt::Display;
