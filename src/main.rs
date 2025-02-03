@@ -293,37 +293,127 @@ fn main() {
     // dbg!(circle.area());
     // println!("{}",circle.area());
 
-    #[derive(Debug)]
-    struct Rectangle {
-        width: f64,
-        height: f64,
+    // #[derive(Debug)]
+    // struct Rectangle {
+    //     width: f64,
+    //     height: f64,
+    // }
+
+    // impl Rectangle {
+    //     fn square(size: f64) -> Self {
+    //         Self {
+    //             width: size,
+    //             height: size,
+    //         }
+    //     }
+    //     fn area(&self) -> f64 {
+    //         self.width * self.height
+    //     }
+    //     fn can_hold(&self,other: &Rectangle) -> bool {
+    //         self.width >= other.width && self.height >= other.height
+    //     }
+    // }
+
+    // let square:Rectangle = Rectangle::square(10.0);
+
+    // let rect1:Rectangle = Rectangle{width:20.0, height:10.0};
+
+    // dbg!(&square);
+    // // println!("{square:#?}");
+    // println!("{}",square.area());
+
+    // println!("{}",rect1.area());
+
+    // println!("{}",square.can_hold(&rect1));
+
+    // #[derive(Debug)]
+    // struct Entity {
+    //     kind: String,
+    //     health: i32,
+    // }
+
+    // impl Entity {
+    //     fn get_kind(&self) -> &str {
+    //         &self.kind
+    //     }
+
+    //     fn in_place(k:String,h:i32) -> Self {
+    //         Self {
+    //             kind:String::from(k),
+    //             health: h,
+
+    //         }
+    //     }
+    // }
+
+    // let entity = Entity {
+    //     kind: String::from("player"),
+    //     health: 100,
+    // };
+
+    // println!("{entity:#?}");
+    // dbg!(entity.get_kind());
+    // dbg!(entity);
+
+    // let entity1:Entity = Entity::in_place(String::from("enemy"), 50);
+    // dbg!(entity1);
+
+    // #[derive(Debug)]
+    // enum IpAddrKind {
+    //     V4(u8,u8,u8,u8),
+    //     V6(String),
+    // }
+
+    // let home = IpAddrKind::V4(127,0,0,1);
+
+    // dbg!(&home);
+    // println!("{home:?}");
+
+    // enum Message {
+    //     Quit,
+    //     Move { x: i32, y: i32 },
+    //     Write(String),
+    //     ChangeColor(u8, u8, u8),
+    // }
+
+    // impl Message {
+    //     fn call(&self) {
+    //         match self {
+    //             Message::Quit => println!("Quit"),
+    //             Message::Move { x, y } => println!("Move to x:{x}, y:{y}"),
+    //             Message::Write(text) => println!("Write {text}"),
+    //             Message::ChangeColor(r, g, b) => println!("Change color to r:{r}, g:{g}, b:{b}"),
+    //         }
+    //     }
+    // }
+
+    // let message = Message::ChangeColor(5,3,1);
+    // message.call();
+
+    let x: i8 = 5;
+    // let y: Option<i8> = Some(5);
+    let y :Option<i8> = Some(9);
+    let sum:Option<i8> = match y {
+        Some(i)=> Some(i+x),
+        None => None,
+    };
+
+    let z: Option<i16> = None;
+    let sum1:Option<i16>= match z{
+        Some(i) => Some(i as i16 + x as i16),
+        other => None,
+    };
+
+    dbg!(sum);
+    println!("{sum:#?}");
+
+
+    dbg!(sum1);
+    println!("{sum1:#?}");
+
+    let config_max = Some(3u8);
+    match config_max {
+        Some(max) => println!("The maximum is configured to be {max}"),
+        _ => (),
     }
-
-    impl Rectangle {
-        fn square(size: f64) -> Self {
-            Self {
-                width: size,
-                height: size,
-            }
-        }
-        fn area(&self) -> f64 {
-            self.width * self.height
-        }
-        fn can_hold(&self,other: &Rectangle) -> bool {
-            self.width >= other.width && self.height >= other.height
-        }
-    }
-
-
-    let square:Rectangle = Rectangle::square(10.0);
-
-    let rect1:Rectangle = Rectangle{width:20.0, height:10.0};
-
-    dbg!(&square);
-    // println!("{square:#?}");
-    println!("{}",square.area());
-
-    println!("{}",rect1.area());
-
-    println!("{}",square.can_hold(&rect1));
 }
