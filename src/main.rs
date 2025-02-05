@@ -390,30 +390,49 @@ fn main() {
     // let message = Message::ChangeColor(5,3,1);
     // message.call();
 
-    let x: i8 = 5;
-    // let y: Option<i8> = Some(5);
-    let y :Option<i8> = Some(9);
-    let sum:Option<i8> = match y {
-        Some(i)=> Some(i+x),
-        None => None,
-    };
+    // let x: i8 = 5;
+    // // let y: Option<i8> = Some(5);
+    // let y :Option<i8> = Some(9);
+    // let sum:Option<i8> = match y {
+    //     Some(i)=> Some(i+x),
+    //     None => None,
+    // };
 
-    let z: Option<i16> = None;
-    let sum1:Option<i16>= match z{
-        Some(i) => Some(i as i16 + x as i16),
-        other => None,
-    };
+    // let z: Option<i16> = None;
+    // let sum1:Option<i16>= match z{
+    //     Some(i) => Some(i as i16 + x as i16),
+    //     other => None,
+    // };
 
-    dbg!(sum);
-    println!("{sum:#?}");
+    // dbg!(sum);
+    // println!("{sum:#?}");
 
 
-    dbg!(sum1);
-    println!("{sum1:#?}");
+    // dbg!(sum1);
+    // println!("{sum1:#?}");
 
-    let config_max = Some(3u8);
-    match config_max {
-        Some(max) => println!("The maximum is configured to be {max}"),
-        _ => (),
-    }
+    // let config_max = Some(3u8);
+    // match config_max {
+    //     Some(max) => println!("The maximum is configured to be {max}"),
+    //     _ => (),
+    // }
+
+    
+    // let mut v :Vec<String> = Vec::new();
+
+    // v.push(String::from("hello"));
+    // v.push(String::from(" "));
+    // v.push(String::from("world!\n"));
+
+    // for s in &v {
+    //     print!("{s}");
+    // }
+
+    // let element:Option<&String> = v.get(2);
+    // match element{
+    //     Some(element) => println!("{}", element),
+    //     None => println!("No element found"),
+    // };
+
+    // dbg!(element);
 }
