@@ -435,4 +435,144 @@ fn main() {
     // };
 
     // dbg!(element);
+    // let sum = math::add(3, 7);
+    // println!("Sum: {}", sum);
+    // let anothersum = add(3,5);
+    // println!("Another sum: {}", anothersum);
+    // // let squared = math::advanced::square(4);
+    // // println!("Square: {}", squared);
+    // let anothersquared = square(4);
+    // println!("Another Square: {}", anothersquared);
+
+    // let mut result= math::Point{vector:vec![]};
+    // result.vector.push(4);
+    // dbg!(&result);
+    // let poper =result.vector.pop();
+    // match poper{
+    //     Some(p) => println!("Popped something else{}",p),
+    //     Some(_) => println!("another thing"),
+    //     None => println!("Nothing")
+    // }
+    // dbg!(poper);
+    // for i in &result.vector {
+    //     dbg!(i);
+    // }
+    // let poper =result.vector.pop();
+    // match poper{
+    //     Some(p) => println!("Popped something else{}",p),
+    //     Some(_) => println!("another thing"),
+    //     None => println!("Nothing")
+    // }
+    // dbg!(&result);
+
+    // let v = vec![1, 2, 3, 4, 5];
+    // let mut exist:&[i32]=&[];
+    // if v.len() > 100 {
+    //     println!("The 100th element is: {:?}",v[100]);
+    //     let does_not_exist = &v[100];
+    //     let does_not_exist = v.get(100);
+    // }else{
+    //     exist = &v[..];
+    // }
+    // dbg!(exist);
+    // let exist: &[i32] = if v.len() > 100 {
+    //     &[]  // Assign an empty slice if `v.len() > 100`
+    // } else {
+    //     dbg!(&v);
+    //     let (_, last_two) = v.split_at(v.len() - 2);
+    //     println!("Last two: {:?}", last_two);
+    //     last_two
+    //     // &v[2..]
+    // };
+    // dbg!(exist);
+    // let mut v = vec![1,2,3,4,5,6,7];
+    // let &first = &v[0];
+    // let &second = &v[1];
+    // dbg!(first);
+    // v.push(8);
+    // dbg!(second);
+    // dbg!(v);
+
+    // let mut s = "some shit";
+    // let mut s1 = String::from("foo");
+    // let mut s2 = String::from("bar");
+    // s1.push_str(&(dbg!(" ".to_string())+&s2));
+    // println!("s1 is {:?}",s1);
+    // s2.push_str(&s2.clone());
+    // println!("Updated s2: {:?}", s2);
+
+    // use std::any::Any;
+
+    // fn print_type_of<T: Any>(val: T) {
+    //     println!("The type of the value is: {}", type_name::<T>());
+    // }
+
+    // print_type_of(s);
+
+
+    // let s1 = String::from("Hello, ");
+    // let s2 = String::from("world!");
+    // let s3 = s1.clone() + &s2;
+    // println!("{}",&s1[..]);
+    // print_type_of(s1.clone());
+    // println!("{}",&s2[..]);
+    // print_type_of(s2.clone());
+    // println!("{}",&s3[..]);
+    // print_type_of(s3.clone());
+
+    // let s = format!("{s1}{s2}{s3}\n");
+    // print!("{s}");
+
+    // let s = "Здравствуйте";
+    // let first = s.chars().nth(0);
+    // println!("{:?}",first);
+
+    // let s = String::from("Здравствуйте");
+    // let first = & s[..2];
+    // println!("{:?}",first);
+    // for c in s.chars() {
+    //     println!("\"{}\"", c);  // This prints each character surrounded by double quotes
+    // }
+    use std::collections::HashMap;
+
+    // let field_name = String::from("Favorite color");
+    // let field_value = String::from("Blue");
+
+    // let mut map = HashMap::new();
+    // map.insert(field_name.clone(), field_value.clone());
+    // map.insert(&field_name, &field_value);
+    
+    // println!("{map:#?}");
+    // println!("{field_value:#?}");
+    // println!("{field_name:#?}");
+    // println!("{:#?}",&field_value);
+    // println!("{:#?}",&field_name);
+
+    // let mut scores = HashMap::new();
+    // scores.insert(String::from("Blue"), 10);
+    // println!("{scores:#?}");
+
+    // // debug_assert_ne!(scores.get("Blue"), Some(&10),"ksksks");
+    
+    // // assert_eq!(scores.get("Blue"), Some(&10));
+    
+    // assert!(matches!(scores.entry(String::from("Yellow")) , std::collections::hash_map::Entry::Vacant(_)));
+    // scores.entry(String::from("Yellow")).or_insert(50);
+    // scores.entry(String::from("Blue")).or_insert(50);
+    
+    // println!("{scores:#?}");
+    // let text = "hello world wonderful world";
+
+    // let mut map = HashMap::new();
+
+    // for word in text.split_whitespace() {
+    //     let count = map.entry(word).or_insert(0);
+    //     *count += 1;
+    // }
+
+    // println!("{map:?}");
 }
+// use std::any::type_name;
+// mod math;
+// use math::add;
+// use math::advanced::square;
